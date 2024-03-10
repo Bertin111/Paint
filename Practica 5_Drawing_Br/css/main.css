@@ -1,0 +1,151 @@
+*
+{
+
+box-sizing: border-box;
+
+
+}
+body {
+  padding: 0;
+  background-color: #fff;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ margin: 0;
+}
+canvas
+{
+background-color: #fff;
+border: 2px solid  rgb(21, 21, 47);
+position: relative;
+z-index: 2;
+margin-top: 250PX;
+}
+.toolbox
+{
+
+background-color: rgb(61, 55, 255);
+border: 1px solid  rgb(0, 0, 0);
+display: flex;
+width: 360px;
+padding: 1rem;
+z-index: 4;
+margin-top: -5px;
+}
+
+.toolbox > *
+
+{
+
+background-color: #fff;
+border: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+height: 50px;
+width: 50px;
+margin: 0.25rem;
+padding: 0.25rem;
+
+
+}
+.toolbox >*:last-child
+
+{
+margin-left:auto;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  top: 300px;
+  left: 300px;
+  background-color: yellow;
+  animation-name: scale;
+  transform-origin: center;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  border-radius: 0%;
+  background-color: #F87171;
+  animation: rotate 3s linear infinite;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #A78BFA transparent;
+  animation: appear 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+} 
+.canvas-painting {
+  cursor: url('https://cdn-icons-png.flaticon.com/128/5425/5425755.png') 5 5, auto; /* Ajusta las coordenadas y el tamaño según sea necesario */
+}
+
